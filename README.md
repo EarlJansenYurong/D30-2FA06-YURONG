@@ -1,14 +1,18 @@
-first_name = input("Enter first name: ")
-last_name = input("Enter last name: ")
-section = input("Enter section: ")
-fav_subject = input("Enter favorite subject: ")
+first_name = input("Enter first name: ").strip()
+last_name = input("Enter last name: ").strip()
+section = input("Enter section: ").strip()
+fav_subject = input("Enter favorite subject: ").strip()
 
-full_name = first_name + " " + last_name
+full_name = f"{first_name} {last_name}".title()
+name_code = full_name.upper()
+formatted_section = section.upper()
+formatted_subject = fav_subject.title()
+
 char_count = len(full_name)
 
-print("\nOutput:")
+print("\nFormatted Output:")
 print("Name:", full_name)
-print("Name Code:", full_name)
-print("Section:", section)
-print("Favorite Subject:", fav_subject)
+print("Name Code:", name_code)
+print("Section:", formatted_section)
+print("Favorite Subject:", formatted_subject)
 print("Character Count:", char_count)
